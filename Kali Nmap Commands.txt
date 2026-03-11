@@ -1,0 +1,55 @@
+=============================
+Nmap Basic Commands
+=============================
+
+Tool: Nmap
+Description: Nmap (Network Mapper) is used for network discovery and security auditing.
+
+Target used for testing: scanme.nmap.org
+
+
+1. TCP SYN Scan
+-----------------------------
+Command:
+sudo nmap -sS -T4 scanme.nmap.org
+
+Description:
+Performs a SYN scan (also called half-open scan) with faster timing.
+Used to quickly discover open ports on the target host.
+
+
+2. Scan Specific Ports
+-----------------------------
+Command:
+nmap -p22,113,139 scanme.nmap.org
+
+Description:
+Scans only the specified ports.
+Example ports:
+22   -> SSH
+113  -> Ident
+139  -> NetBIOS
+
+
+3. Fast SYN Scan
+-----------------------------
+Command:
+sudo nmap -sS -T4 scanme.nmap.org
+
+Description:
+Uses SYN scan with aggressive timing (T4) for faster results.
+Requires root/sudo privileges.
+
+
+4. Xmas Scan with Verbose Output
+-----------------------------
+Command:
+sudo nmap -sX -T4 -p 22,80,443,113 -v scanme.nmap.org
+
+Description:
+Performs an Xmas scan on selected ports.
+Options:
+-sX  -> Xmas scan
+-T4  -> Faster timing
+-p   -> Specify ports
+-v   -> Verbose output
